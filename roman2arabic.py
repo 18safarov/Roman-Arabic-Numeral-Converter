@@ -73,8 +73,8 @@ while True:
             for i in range(len(roman_to_arabic)):
                 value = roman_lat[roman_to_arabic[i]]
 
-                # если справа есть символ и он больше надо минусовать(if sim2 <= sim1 - "+")(VI = 5 + 1)
-                # иначе плюс(if sim2 > sim1 - "-")(IV = 5 - 1)
+                # If there's a symbol on the right and it's larger, minus it (if sim2 <= sim1 - "+") (VI = 5 + 1)
+                # Otherwise, plus it (if sim2 > sim1 - "-") (IV = 5 - 1)
                 if i + 1 < len(roman_to_arabic) and roman_lat[roman_to_arabic[i]] < roman_lat[roman_to_arabic[i + 1]]:
                     total -= value
                 else:
@@ -106,4 +106,5 @@ while True:
             print("Wrong input. Try again.")
 
     else:
+
         print("Wrong input. Try again.")
